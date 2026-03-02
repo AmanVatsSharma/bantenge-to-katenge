@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { trackPixel } from '@/lib/pixel'
 import StickyBar from '@/components/StickyBar'
 import BookCover from '@/components/BookCover'
@@ -132,6 +133,36 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── BOOK LAUNCH / PROMOTION IMAGE ───────────────────────────────── */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center reveal mb-10">
+            <div className="lotus-divider mb-6">
+              <span className="text-gold font-hindi text-2xl font-bold">पुस्तक विमोचन — योगी जी के साथ</span>
+            </div>
+            <p className="text-cream/70 font-hindi text-base max-w-2xl mx-auto">
+              योगी आदित्यनाथ जी द्वारा इस पुस्तक का विमोचन — देश को सन्देश: बंटेंगे तो कटेंगे
+            </p>
+          </div>
+          <div className="reveal rounded-2xl overflow-hidden border-2 border-gold/30 shadow-2xl" style={{
+            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5), 0 0 30px rgba(255,215,0,0.15)'
+          }}>
+            <Image
+              src="/images/book-promotion.jpeg"
+              alt="योगी आदित्यनाथ जी के साथ बंटेंगे तो कटेंगे पुस्तक विमोचन — देश को सन्देश"
+              width={1600}
+              height={835}
+              className="w-full h-auto object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 800px"
+            />
+          </div>
+          <p className="text-center text-cream/50 font-hindi text-sm mt-4">
+            लेखक: इन्द्रसिंह खिवाड़ा
+          </p>
         </div>
       </section>
 
